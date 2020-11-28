@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\AddTaskButtonContainer",
+    "\\src\\components\\TasksPage",
+    "\\src\\components\\UserTasksList"
+  ],
+  "SelectedNode": "\\src\\components\\AddTaskButtonContainer\\AddTaskButtonContainer.scss",
+  "PreviewInSolutionExplorer": false
+}
