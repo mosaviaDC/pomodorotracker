@@ -3,7 +3,7 @@ import TasksPage from '../TasksPage/TasksPage';
 //import Login from '../Login/Login'
 import { Switch, Route, Link } from "react-router-dom";
 //import Register from '../Register/Register';
-import NavBar from '../NavBar/NavBar'
+import NavBar from '../NavBar/NavBar.jsx'
  const App = () => {
      return <div>
          <NavBar />,
