@@ -4,14 +4,15 @@ import './TasksPage.scss';
 
 
 import UserTasksList from '../UserTasksList/UsetTasksList';
-import AddTaskButtonContainer from '../AddTaskButtonContainer/AddTaskButtonContainer'
+import AddTask from '../AddTask/AddTask'
 
 const TasksPage = () => {
+    document.title = "Задачи";
     return <div className="container-fluid TasksPage">
 
 
-
-              <AddTaskButtonContainer/>
+        <UserTasksList Tasks={false}/>
+              <AddTask/>
     
         </div>
 }

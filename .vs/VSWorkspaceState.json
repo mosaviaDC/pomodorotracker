@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\AddTaskButtonContainer",
+    "\\src\\components\\App",
+    "\\src\\components\\Login",
+    "\\src\\components\\NavBar",
+    "\\src\\components\\Register",
     "\\src\\components\\TasksPage",
-    "\\src\\components\\UserTasksList"
+    "\\src\\components\\UserTasksList",
+    "\\src\\services"
   ],
-  "SelectedNode": "\\src\\components\\AddTaskButtonContainer\\AddTaskButtonContainer.scss",
+  "SelectedNode": "\\src\\components\\Register\\Register.jsx",
   "PreviewInSolutionExplorer": false
 }
