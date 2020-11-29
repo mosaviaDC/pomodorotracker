@@ -50,6 +50,7 @@ const Login = (props) => {
                     props.history.push("/tasks");
                 },
                 (error) => {
+                    console.log(error.response);
                     let resMessage = ''
                     if (error.response.status === 404) {
                         resMessage = "Ошибка 404: e-mail не найден";
