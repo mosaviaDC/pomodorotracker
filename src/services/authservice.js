@@ -3,6 +3,7 @@
 const url = "/account"
 
 
+
 const register = (email, firstName, password) => {
     let lastName ='не используется'
     return axios.post(url + '/signup', {
@@ -51,11 +52,11 @@ const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem('user'));
 };
 
-const authToken = ()=>{
+const getAuthToken = ()=>{
     const user = JSON.parse(localStorage.getItem('user'));
 
-    if (user && user.accesToken) {
-        return (`Authoriztion: 'Bearer ' + ${user.accesToken}`);
+    if (user && user.token) {
+        return (user.token);
     }
     else return {};
 }
@@ -64,6 +65,7 @@ export default {
     login,
     register,
     logout,
-    getCurrentUser
+    getCurrentUser,
+    getAuthToken
 }
 

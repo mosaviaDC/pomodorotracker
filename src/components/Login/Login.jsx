@@ -47,7 +47,7 @@ const Login = (props) => {
             AuthService.login(username, password).then(
                 () => {
 
-                    window.location.reload();
+                    props.history.push("/tasks");
                 },
                 (error) => {
                     let resMessage = ''
