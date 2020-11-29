@@ -1,8 +1,8 @@
 ﻿import React from 'react';
 import TasksPage from '../TasksPage/TasksPage';
-import Login from '../Login/Login.jsx'
+import Login from '../Login/Login'
 import { Switch, Route, Link } from "react-router-dom";
-import Register from '../Register/Register.jsx';
+import Register from '../Register/Register';
 import NavBar from '../NavBar/NavBar'
  const App = () => {
      return <div>
