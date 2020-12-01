@@ -16,6 +16,7 @@ import AppFallBack from '../AppFallBack/AppFallBack'
              <Route exact path="/login" component={Login} />
              <Route path='*' exact component={AppFallBack} />
          </Switch>
+       
          </div>
 }
 export default App;
