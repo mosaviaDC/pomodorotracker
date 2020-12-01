@@ -34,6 +34,9 @@ i{
 #imgfourth {
     background-image: url('../../assets/4.jpg');
 }
+.bg-light{
+    font-size:8px;
+}
 @media screen and (max-device-width:800px) {
     #img {
         background-size:cover;
