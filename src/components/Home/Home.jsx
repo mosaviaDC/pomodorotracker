@@ -51,7 +51,7 @@ const Home = () => {
 
              </div>
     </div>
-      <div className="bg-light">
+      <div className="footer">
             © 2020 Denis Cherniy, mosavia.dc@gmail.com
        </div>
     </div>
