@@ -17,7 +17,7 @@ const NavBar = () => {
     }
 
     return <div>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand navbar-light bg-light">
             <Link to={"/"} className="navbar-brand">
                 Помидор
             </Link>

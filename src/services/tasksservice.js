@@ -1,15 +1,49 @@
 import axios from 'axios';
 import AuthService from './authservice'
 
-const backurl ="https://pomodorotodotracker.herokuapp.com/tasks"
-
+const backurl ="/tasks"
+const headers = {
+    "Authorization": "Bearer " + AuthService.getAuthToken(),
+    'Content-Type': 'application/json'
+}
 
 const GetTasks = () => {
+
+
     return axios.get(backurl, {
-        headers: {
-            "Authorization": "Bearer " + AuthService.getAuthToken(),
-            'Content-Type': 'application/json'
-        }
+        headers: headers
+    }).then((response) => {
+        return response.data;
+    });
+};
+
+const UpdateTaskStatus = (task) => {
+    return axios.put(backurl +'/updatestatus', task,{
+        headers: headers,
+       
+    });
+}
+
+const DeleteTask = (id) => {                       
+ 
+    return axios.delete(backurl + '/delete/' + id, {
+        headers: headers
+    });
+}
+
+
+
+const AddTask = (taskName, taskTime, taskDescription = 'без описания') => {
+
+    const task = {
+        taskName: taskName,
+        taskTime: taskTime,
+        taskDescription: taskDescription
+    }
+    return axios.post(backurl + '/addtask', task,{
+       headers:headers
+  
+
     }).then((response) => {
         return response.data;
     });
@@ -17,5 +51,8 @@ const GetTasks = () => {
 
 
 export default {
-    GetTasks
+    GetTasks,
+    AddTask,
+    DeleteTask,
+    UpdateTaskStatus
 }

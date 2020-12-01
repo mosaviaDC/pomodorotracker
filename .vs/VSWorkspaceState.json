@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\App",
+    "\\src\\components\\AddTask",
     "\\src\\components\\Login",
     "\\src\\components\\NavBar",
     "\\src\\components\\Register",
     "\\src\\components\\TasksPage",
-    "\\src\\components\\UserTasksList",
+    "\\src\\components\\UserTaskItem",
     "\\src\\services"
   ],
-  "SelectedNode": "\\src\\components\\NavBar\\NavBar.jsx",
+  "SelectedNode": "\\src\\components\\TasksPage\\TasksPage.jsx",
   "PreviewInSolutionExplorer": false
 }

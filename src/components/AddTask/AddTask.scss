@@ -4,3 +4,21 @@ button {
     max-width: 35vh;
     
 }
+.btn{
+    font-size:20px;
+}
+.fixed-bottom {
+    margin-left:3em;
+    margin-bottom:3em;
+    border:0.01em solid rgba(22, 171, 48, 0.58);
+}
+.fixed-bottom:hover {
+    background-color:forestgreen;
+    color:whitesmoke;
+   
+}
+@media screen and (max-width:750px){
+.btn {
+        font-size: 16px;
+    }
+}

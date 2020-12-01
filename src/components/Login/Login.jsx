@@ -2,7 +2,7 @@
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
-
+import './Login.scss';
 import AuthService from "../../services/authservice";
 
 const required = (value) => {
@@ -48,6 +48,7 @@ const Login = (props) => {
                 () => {
 
                     props.history.push("/tasks");
+                    window.location.reload();
                 },
                 (error) => {
                     console.log(error.response);
@@ -103,9 +104,14 @@ const Login = (props) => {
                     </div>
 
                     <div className="form-group">
-                        <button className="btn btn-primary btn-block" disabled={loading}>
+                        <button className="btn btn-primary " disabled={loading}>
                             {loading && (
-                                <span className="spinner-border spinner-border-sm"></span>
+                                <div className="loading-container">
+                                    <div className="yellow"></div>
+                                    <div className="red"></div>
+                                    <div className="blue"></div>
+                                    <div className="violet"></div>
+                                </div>   
                             )}
                             <span>Войти</span>
                         </button>

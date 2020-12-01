@@ -53,6 +53,7 @@ const Register = (props) => {
                 () => {
 
                     props.history.push("/tasks");
+                    window.location.reload();
         
                 },
                 (error) => {
@@ -119,9 +120,14 @@ const Register = (props) => {
                     </div>
 
                     <div className="form-group">
-                        <button className="btn btn-primary btn-block" disabled={loading}>
+                        <button className="btn btn-primary" disabled={loading}>
                             {loading && (
-                                <span className="spinner-border spinner-border-sm"></span>
+                                <div className="loading-container">
+                                    <div className="yellow"></div>
+                                    <div className="red"></div>
+                                    <div className="blue"></div>
+                                    <div className="violet"></div>
+                                </div>   
                             )}
                             <span>Регистрация</span>
                         </button>

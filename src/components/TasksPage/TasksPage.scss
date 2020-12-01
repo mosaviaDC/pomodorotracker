@@ -7,7 +7,26 @@
 
 
 .TasksPage {
+    overflow-y: auto;
+    overflow-x:hidden;
+    max-height: 70vh;
+
 }
+.TasksPage >p{
+    color:#4b4b4b;
+    font-size:22px;
+}
+.TasksPage>p>i{
+    color:#feb60a;
+    margin:0;
+    padding:0;
+}
+.TasksPage>p>a {
+    color:black;
+    
+}
+
+
 .loading-container{
     display: flex;
     justify-content: center;
@@ -56,5 +75,34 @@
     75% {
         filter: blur(1px);
         transform: scale(1.4);
+    }
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    background-color:rgba(103, 103, 103, 0.47);
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  display:none;
+ }
+
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  display:none;
+}
+::-webkit-scrollbar-thumb {
+   background-color: rgba(84, 37, 37, 0.35);
+}
+
+
+@media screen and (max-device-width:750px){
+    .TasksPage > p {
+        color: #4b4b4b;
+        font-size: 12px;
     }
 }
