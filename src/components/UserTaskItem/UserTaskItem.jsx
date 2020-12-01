@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import './UserTaskItem.scss';
 import TasksService from '../../services/tasksservice'
+import Tomato from '../../assets/tomato.jpg'
 //Непосредственно список задач пользователя или сообщение об его отсутсвии
 const UserTaskItem = (task) => {
     const [loading, setLoading] = useState(false);
@@ -89,6 +90,10 @@ return <div className="userTaskItem container-fluid">
          )}
 
         <span className="taskName"> {task.task.taskName} </span>
+
+    {task.task.inProgress && (
+        <img src={Tomato}> {task.task.taskPeriods} </img>
+        )}
 
         
         {task.task.inPomodoroPause &&  !task.task.isDone && (
