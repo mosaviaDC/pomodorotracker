@@ -93,14 +93,14 @@ const AddTaskForm = () => {
                     className="form-control"
                     name="taskName"
                     value={taskName}
-                    placeholder="Спасти этом мир"
+                    placeholder="Спасти этот мир"
                     onChange={onChangeTaskName}
                     validations={[required]}
                 />
             </div>
 
             <div className="form-group">
-                <label htmlFor="taskTime">Примерное время на задачу</label>
+                <label htmlFor="taskTime">Примерное количество минут на задачу</label>
                 <Input
                     type="text"
                     className="form-control"
