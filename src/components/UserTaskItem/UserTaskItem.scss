@@ -32,6 +32,16 @@ i:hover{
 #pauseBtn{
     display:inline-flex;
 }
+#tomatoImg{
+    width:16px;
+    height:16px;
+}
+#time { 
+    margin:0;
+    margin-right:0.4em;
+    padding:0;
+}
+
 
 @media screen and (max-device-width:750px){
     .taskName{
@@ -41,5 +51,9 @@ i:hover{
         margin-right:1em;
         text-align:center;
         font-size: 14px;
+    }
+    span {
+        
+        font-size:10px;
     }
 }

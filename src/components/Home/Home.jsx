@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import './Home.scss';
+import Tomato from '../../assets/tomato.png'
 const Home = () => {
 
 
@@ -34,8 +35,15 @@ const Home = () => {
     
 
          </div>
-         <div className="col-4" id="description">
-             <i className="far fa-play-circle" id="decripImg"> Запускает задачу </i>
+                <div className="col-4" id="description">
+                    <h1> Краткая инструкция </h1>
+                    <i className="fas fa-hourglass-start">Время промежутка</i>
+                    <img id="tomatoImg"  src={Tomato} /> Промежутков осталось
+        
+
+
+
+             <i className="far fa-play-circle" > Запускает задачу </i>
              <i className="far fa-pause-circle">Приостановить задачу</i>
              <i className="fas fa-circle-notch ">Завершает задачу</i>
              <i className="far fa-minus-circle" > Удаляет задачу</i>

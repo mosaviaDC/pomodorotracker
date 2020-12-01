@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react';
 import './UserTaskItem.scss';
 import TasksService from '../../services/tasksservice'
-import Tomato from '../../assets/tomato.jpg'
+import Tomato from '../../assets/tomato.png'
 //Непосредственно список задач пользователя или сообщение об его отсутсвии
 const UserTaskItem = (task) => {
     const [loading, setLoading] = useState(false);
@@ -92,7 +92,10 @@ return <div className="userTaskItem container-fluid">
         <span className="taskName"> {task.task.taskName} </span>
 
     {task.task.inProgress && (
-        <img src={Tomato}> {task.task.taskPeriods} </img>
+        <span>
+            <img id="tomatoImg" src={Tomato} />
+            {task.task.taskPeriods}
+        </span>
         )}
 
         
@@ -101,9 +104,9 @@ return <div className="userTaskItem container-fluid">
                  Пауза: {task.task.currentPomodoroPauseTime}
              </span>
             )}
-        {task.task.currentPomodoroTime >= 0 && task.task.inProgress && !task.task.isDone && (
+        {task.task.currentPomodoroTime >= 0 && task.task.inProgress && !task.task.isDone && !task.task.inPomodoroPause && (
         <span>
-            Текущий помидор : {task.task.currentPomodoroTime}
+            <i className="fas  fa-spin fa-hourglass-start" id="time"></i> {task.task.currentPomodoroTime}
         </span>
         )}
         
