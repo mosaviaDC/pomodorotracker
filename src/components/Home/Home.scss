@@ -2,13 +2,16 @@
     margin-top:1em;
 }
 #description > p {
+    font-family:'Times New Roman',sans-serif;
     font-size: 18px;
     text-align:left;
 }
-a{
-    text-decoration:none;
-    color:forestgreen;
-    text-align:center;
+a {
+    text-decoration: none;
+    color: forestgreen;
+    text-align: center;
+    font-family:Magneto;
+    text-shadow: black 0 0 1px;
 }
 i{
     text-align:left;
@@ -37,32 +40,42 @@ i{
 .footer{
     font-size:8px;
 }
+#decripImg{
+    margin-top:1.5em;
+}
 @media screen and (max-device-width:800px) {
     #img {
-        background-size:cover;
+        background-size: cover;
     }
-    a{
-        text-align:center;
+
+    a {
+        text-align: center;
     }
+
     #description {
-        text-align:left;
-  
+        text-align: left;
     }
-    #description >i{
-        text-align:center;
+
+    #description > i {
+        text-align: center;
     }
+
     #description > h2 {
         font-size: 12px;
-        text-align:center;
+        text-align: center;
     }
+
     #description > p {
         text-align: left;
-        font-size:12px;
+        font-size: 12px;
     }
+    i {
+       font-size:12px;
+    }
+
+
     #description > h1 {
         text-align: center;
         font-size: 16px;
     }
-
-
 }

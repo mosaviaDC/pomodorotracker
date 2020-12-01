@@ -32,6 +32,7 @@
       "react-app/jest"
     ]
   },
+  "proxy":"https://pomodorotodotracker.herokuapp.com/",
   "secure": "true",
 
   "browserslist": {

@@ -19,7 +19,7 @@ const Home = () => {
      <div className="row no-gutters">
          <div className="col-4" id="description">
              <h1>Как это работает?</h1>
-             <p>Вам необходимо лишь указать примерное время на задачу. Приложение само разобъет ее на нужное количество промежутков.
+             <p>Вам необходимо лишь указать примерное время на задачу. Приложение само разобъет ее на нужное количество "помидоров".
              Запустите задачу, а приложение напонмит когда нужно будет сделать перерыв
              </p>
              <h1> <a href='/signup'> Попробовать </a>       </h1>
@@ -35,7 +35,8 @@ const Home = () => {
 
          </div>
          <div className="col-4" id="description">
-             <i className="far fa-play-circle"> Запускает задачу </i>
+             <i className="far fa-play-circle" id="decripImg"> Запускает задачу </i>
+             <i className="far fa-pause-circle">Приостановить задачу</i>
              <i className="fas fa-circle-notch ">Завершает задачу</i>
              <i className="far fa-minus-circle" > Удаляет задачу</i>
       
