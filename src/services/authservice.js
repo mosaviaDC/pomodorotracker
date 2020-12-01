@@ -1,6 +1,6 @@
 ﻿import axios from "axios";
 
-const url = "/account"
+const url = "https://pomodorotodotracker.herokuapp.com/account"
 
 
 
