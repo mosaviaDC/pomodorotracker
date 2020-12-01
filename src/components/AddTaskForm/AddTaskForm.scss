@@ -1,4 +1,14 @@
-﻿#addForm{
-    display:none;
-    text-align:center;
+﻿#addForm {
+    display: none;
+    text-align: center;
+    border:1px solid black;
+}
+#addForm>i{
+    padding:0;
+    margin-right:0px;
+    color:red;
+}
+#addForm>i:hover{
+    border:1px solid red;
+    border-radius:5px;
 }

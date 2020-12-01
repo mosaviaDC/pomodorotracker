@@ -82,7 +82,7 @@ const AddTaskForm = () => {
 
 
     return <div id="addForm">
-        <i className="fas fa-times fa-lg closeButton " onClick={onCloseButtonClick}></i>
+        <i className="fas fa-times fa-lg closeButton " onClick={onCloseButtonClick}></i>  
 
         <Form onSubmit={handleLogin} ref={form}>
 
@@ -93,6 +93,7 @@ const AddTaskForm = () => {
                     className="form-control"
                     name="taskName"
                     value={taskName}
+                    placeholder="Спасти этом мир"
                     onChange={onChangeTaskName}
                     validations={[required]}
                 />
@@ -123,7 +124,7 @@ const AddTaskForm = () => {
             </div>
 
             <div className="form-group">
-                <button className="btn btn-primary btn-block" disabled={loading}>
+                <button className="btn btn-primary" disabled={loading}>
                   
                     <span>Добавить задачу</span>
                 </button>

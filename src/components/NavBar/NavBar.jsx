@@ -1,6 +1,7 @@
 ﻿import React, { useState, useEffect } from "react";
 import AuthService from '../../services/authservice'
 import { Link } from 'react-router-dom';
+import './NavBar.scss';
 const NavBar = () => {
     const [currentUser, setCurrentUser] = useState(undefined);
 
@@ -22,11 +23,7 @@ const NavBar = () => {
                 Помидор
             </Link>
             <div className="navbar-nav mr-auto">
-                <li className="nav-item">
-                    <Link to={"/tasks"} className="nav-link">
-                        Tasks
-                    </Link>
-                </li>
+              
 
               
 
@@ -37,8 +34,8 @@ const NavBar = () => {
             {currentUser ? (
                 <div className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <Link to={"/tasks"} className="nav-link">
-                                {currentUser.firstName}
+                            <Link to={"/tasks"} id ="userName" className="nav-link">
+                               {currentUser.firstName}
 
                         </Link>
                     </li>

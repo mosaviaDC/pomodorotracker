@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\components",
     "\\src\\components\\AddTask",
+    "\\src\\components\\AddTaskForm",
+    "\\src\\components\\App",
     "\\src\\components\\Login",
     "\\src\\components\\NavBar",
     "\\src\\components\\Register",
-    "\\src\\components\\TasksPage",
-    "\\src\\components\\UserTaskItem",
-    "\\src\\services"
+    "\\src\\components\\TasksPage"
   ],
-  "SelectedNode": "\\src\\components\\TasksPage\\TasksPage.jsx",
+  "SelectedNode": "\\src\\services\\authservice.js",
   "PreviewInSolutionExplorer": false
 }

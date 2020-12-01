@@ -1,6 +1,6 @@
 ﻿import axios from "axios";
 
-const url = "https://pomodorotodotracker.herokuapp.com/account"
+const url = "/account"
 
 
 
@@ -28,20 +28,23 @@ const register = (email, firstName, password) => {
 const login = (email, password) => {
 
 
-    return axios.post(url + '/signin', {
+        return axios.post(url + '/signin', {
         email,
         password
     }
     ).then((respone) => {
+        console.log(respone);
         if (respone.data.token) {
             localStorage.setItem('user', JSON.stringify(respone.data));
         }
 
 
         return respone.data;
-    })
-    
+    }).catch((err) => {
+        return err;
+    });
 
+  
 };
 
 const logout = () => {

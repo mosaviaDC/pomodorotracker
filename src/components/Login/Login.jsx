@@ -45,13 +45,12 @@ const Login = (props) => {
 
         if (checkBtn.current.context._errors.length === 0) {
             AuthService.login(username, password).then(
-                () => {
-
+                (r) => {
                     props.history.push("/tasks");
                     window.location.reload();
                 },
                 (error) => {
-                    console.log(error.response);
+                    console.log(error);
                     let resMessage = ''
                     if (error.response.status === 404) {
                         resMessage = "Ошибка 404: e-mail не найден";
@@ -104,7 +103,7 @@ const Login = (props) => {
                     </div>
 
                     <div className="form-group">
-                        <button className="btn btn-primary btn-block" disabled={loading}>
+                        <button className="btn btn-primary" disabled={loading}>
                             {loading && (
                                 <div className="loading-container">
                                     <div className="yellow"></div>
