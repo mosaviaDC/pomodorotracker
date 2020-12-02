@@ -36,9 +36,20 @@ const NavBar = () => {
                     <li className="nav-item">
                             <Link to={"/tasks"} id ="userName" className="nav-link">
                                {currentUser.firstName}
-
                         </Link>
-                    </li>
+                        </li>
+                        {currentUser.telegramUserName && (
+                            <li className="nav-item">
+                                <Link to={"/tasks"} id="userName" className="nav-link">
+                                    {currentUser.telegramUserName}
+                                </Link>
+                            </li>
+                        )}
+                        {!currentUser.telegramUserName && (
+                            <a href="https://t.me/PomodoroReminder_bot" className="nav-link">Tele Bot </a>
+                            )}
+
+
                     <li className="nav-item">
                         <a href="/login" className="nav-link" onClick={logOut}>
                             Выйти

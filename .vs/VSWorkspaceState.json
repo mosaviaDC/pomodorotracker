@@ -4,9 +4,9 @@
     "\\public",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\AddTaskForm",
     "\\src\\components\\Home",
     "\\src\\components\\Login",
+    "\\src\\components\\NavBar",
     "\\src\\components\\Register",
     "\\src\\components\\UserTaskItem",
     "\\src\\services"
