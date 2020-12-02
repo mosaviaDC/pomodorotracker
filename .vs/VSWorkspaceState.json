@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets",
     "\\src\\components",
     "\\src\\components\\AddTaskForm",
     "\\src\\components\\App",
     "\\src\\components\\AppFallBack",
+    "\\src\\components\\Home",
     "\\src\\components\\TasksPage",
     "\\src\\components\\UserTaskItem",
     "\\src\\services"
   ],
-  "SelectedNode": "\\src\\components\\Register\\Register.jsx",
+  "SelectedNode": "\\src\\components\\Home\\Home.jsx",
   "PreviewInSolutionExplorer": false
 }
