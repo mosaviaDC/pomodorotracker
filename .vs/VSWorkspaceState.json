@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
+    "\\src\\assets",
     "\\src\\components",
-    "\\src\\components\\Home",
-    "\\src\\components\\Login",
-    "\\src\\components\\NavBar",
-    "\\src\\components\\Register",
+    "\\src\\components\\AddTaskForm",
+    "\\src\\components\\App",
+    "\\src\\components\\AppFallBack",
+    "\\src\\components\\TasksPage",
     "\\src\\components\\UserTaskItem",
     "\\src\\services"
   ],
-  "SelectedNode": "\\src\\components\\UserTaskItem\\UserTaskItem.scss",
+  "SelectedNode": "\\src\\components\\Register\\Register.jsx",
   "PreviewInSolutionExplorer": false
 }

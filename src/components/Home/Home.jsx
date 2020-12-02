@@ -24,7 +24,7 @@ const Home = () => {
             <img src={Woman} className="img-rounded homeMainImg" alt="..." />
 
             <h4>Приложение само разобьет задачу на временные промежтки, напомнит о перерыве или старте нового периода</h4>
-            <a href='/tasks'> Перейти к задачам ! </a>
+            <a href='/tasks'> Начать! </a>
         </div>
 
         <div className="text-xs-center homeMainBlock block">
@@ -38,7 +38,7 @@ const Home = () => {
             <li> Если что-то пошло не по плану, помидор можно поставить на паузу </li>
             <li> Создав задачу, не забудьте ее запустить </li>
               <h4> Приложение можно использовать и как простой ToDo лист</h4>
-            <a href='/tasks'> Создать свою первую задачу ! </a>
+            <a href='/tasks'> Создать свою первую задачу! </a>
         </div>
 
         <div className="text-xs-center homeMainBlock block">
