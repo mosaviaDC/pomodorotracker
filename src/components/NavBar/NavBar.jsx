@@ -1,10 +1,10 @@
 ﻿import React, { useState, useEffect } from "react";
 import AuthService from '../../services/authservice'
+import TaskPage from '../TasksPage/TasksPage'
 import { Link } from 'react-router-dom';
 import './NavBar.scss';
 const NavBar = () => {
     const [currentUser, setCurrentUser] = useState(undefined);
-
     useEffect(() => {
         const user = AuthService.getCurrentUser();
 
@@ -15,6 +15,7 @@ const NavBar = () => {
 
     const logOut =()=>{
         AuthService.logout();
+        window.location.reload();
     }
 
     return <div>
@@ -38,29 +39,22 @@ const NavBar = () => {
                                {currentUser.firstName}
                         </Link>
                         </li>
-                        {currentUser.telegramUserName && (
-                            <li className="nav-item">
-                                <Link to={"/tasks"} id="userName" className="nav-link">
-                                    {currentUser.telegramUserName}
-                                </Link>
-                            </li>
-                        )}
-                        {!currentUser.telegramUserName && (
-                            <a href="https://t.me/PomodoroReminder_bot" className="nav-link">Tele Bot </a>
-                            )}
+                   
 
 
-                    <li className="nav-item">
-                        <a href="/login" className="nav-link" onClick={logOut}>
-                            Выйти
-              </a>
+                        <li className="nav-item">
+                            <Link to={"/signin"} id="userName" className="nav-link" onClick={logOut}>
+                                Выйти
+                            </Link>
+                         
+ 
                     </li>
                 </div>
                 ) :
                 (
                     <div className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link to={"/login"} className="nav-link">
+                            <Link to={"/signin"} className="nav-link">
                               Войти
               </Link>
                         </li>
@@ -68,7 +62,7 @@ const NavBar = () => {
                         <li className="nav-item">
                             <Link to={"/signup"} className="nav-link">
                                 Регистрация
-              </Link>
+                        </Link>
                         </li>
                     </div>
                 )}

@@ -4,14 +4,18 @@ import './TasksPage.scss';
 
 
 import UserTaskItem from '../UserTaskItem/UserTaskItem';
-import AddTask from '../AddTask/AddTask'
-import TasksService from '../../services/tasksservice'
-import AddTaskForm from '../AddTaskForm/AddTaskForm'
+import AddTask from '../AddTask/AddTask';
+import TasksService from '../../services/tasksservice';
+import AuthService from '../../services/authservice';
+import AddTaskForm from '../AddTaskForm/AddTaskForm';
+import Image from '../../assets/img/graph-man.svg';
 import { useEffect } from 'react';
 
-const TasksPage = () => {
+const TasksPage = (isLogin) => {
     const [tasks, updateTasks] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [isEntered, setIsEntered] = useState(false);
+    const [telegramUserName, setTelegramUserName] = useState(null);
     document.title = "Задачи";
 
     const GetTasks = () => {
@@ -31,21 +35,30 @@ const TasksPage = () => {
        
      
     }
-    useEffect(()=>{
-        GetTasks();
+    useEffect(() => {
+        const user = AuthService.getCurrentUser();
 
-        const interval = setInterval(() => {
-            TasksService.GetTasks().then(
-                (response) => {
-                    updateTasks(response);
-                }, (error) => {
-                    console.log(error.response);
-                },
-            );
+        if (user) {
+            setIsEntered(true);
+            GetTasks();
 
-        }, 1500);              
-        return () => clearInterval(interval);
+            if (user.telegramUserName) {
+                setTelegramUserName(user.telegramUserName);
+            }
+            const interval = setInterval(() => {
+                TasksService.GetTasks().then(
+                    (response) => {
+                        updateTasks(response);
+                    }, (error) => {
+                        console.log(error.response);
+                    },
+                );
 
+            }, 1500);
+            return () => clearInterval(interval);
+
+
+        }
 
 
 
@@ -65,7 +78,12 @@ const TasksPage = () => {
 
 
     return <div className="container-fluid TasksPage">
-        <p> <i className="fas fa-lightbulb"></i> Можно добавить уведомления в телеграмме, <a className="telegramLink" href="https://t.me/PomodoroReminder_bot"> @PomodoroReminder_bot</a>  </p>
+        {!telegramUserName && (
+            <p> <i className="fas fa-lightbulb"></i> Можно добавить уведомления в телеграмме, <a className="telegramLink" href="https://t.me/PomodoroReminder_bot"> @PomodoroReminder_bot</a>  </p>
+        )}
+        {telegramUserName && (
+            <p> <i className="fas fa-lightbulb"></i> Подключен telegram @{telegramUserName} </p>
+        )}
         {loading && (
             <div className="loading-container">
                 <div className="yellow"></div>
@@ -76,10 +94,11 @@ const TasksPage = () => {
             
         )
         }
-        {tasks.length ===0 && !loading && (
+        {tasks.length ===0 && !loading && isEntered && (
              <div>
             <div id="UserTasks" >
                 <h1>Еще нет задач</h1>
+                <img  className="noTasksImg" src={Image}/>
                 <p>Сосредоточьтесь на своем дне</p>
                 <p>Коснитесь кнопки ниже, чтобы создать свою первую задачу!</p>
                
@@ -88,6 +107,18 @@ const TasksPage = () => {
              </div>
         )
         }
+        {!isEntered && (
+            <div id="UserTasks" >
+                <h1>Еще нет задач</h1>
+                <img className="noTasksImg" src={Image} />
+                <p>Сосредоточьтесь на своем дне</p>
+                <p>Зарегистрируйтесь, чтобы создать свою первую задачу!</p>
+                <a href="/signup"> Регистрация </a>  или <a href="/signin"> Вход в аккаунт  </a>       
+
+            </div>
+         )}
+
+
         {tasks.length > 0 && !loading && (
 
 

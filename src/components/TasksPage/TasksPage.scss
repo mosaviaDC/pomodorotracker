@@ -4,13 +4,15 @@
     --blue: #00dbf9;
     --violet: #da00f7;
 }
-
+.noTasksImg{
+    width:256px;
+    height:200px;
+}
 
 .TasksPage {
     overflow-y: auto;
-    overflow-x:hidden;
+    overflow-x: hidden;
     max-height: 70vh;
-
 }
 .TasksPage >p{
     color:#4b4b4b;
@@ -101,6 +103,11 @@
 
 
 @media screen and (max-device-width:750px){
+    .noTasksImg {
+        width: 190px;
+        height: 150px;
+    }
+
     .TasksPage > p {
         color: #4b4b4b;
         font-size: 12px;

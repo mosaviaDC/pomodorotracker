@@ -1,71 +1,65 @@
 ﻿import React from 'react';
 import './Home.scss';
-import Tomato from '../../assets/tomato.png'
+import Student from '../../assets/img/student.svg';
+import Woman from '../../assets/img/woman.svg';
+import WorkPanel from '../../assets/img/workpanel.svg';
+import LikeMan from '../../assets/img/likeman.svg';
+
+
 const Home = () => {
+    return <div>     
+        <div className="text-xs-center homeMainBlock block">
+            <h1> Что это такое? </h1>
+            <p>В современном мире, с каждым днем становится все больше задач. Отличный интсрумент тайм-менеджмента - метод pomodoro</p>
+            <img src={Student} className="img-rounded homeMainImg" alt="..." />
 
-
-
-    return<div>
-    <div className="container-fluid">
-        <div className="row no-gutters">
-            <div className="col-8 img" id="imgfirst">         
-             </div>
-            <div className="col-4" id="description">
-             <h1> Зачем это нужно?</h1>
-             <p> Техника Помодоро - это эффективный способ управления своим временем.
-               Данное приложение поможет эффективнее работать над задачами и соблюдать промежутки</p>
-             <h1> <a id="signUp" href='/signup'> Попробовать </a>       </h1>
+            <h4>Это приложение поможет правильно использовать технику помидора, посдкажет время  когда лучше сделать перерыв или сконцентрироваться над задачей  </h4>
+            <a href='/tasks'> Перейти к задачам ! </a>
         </div>
-     </div>
-     <div className="row no-gutters">
-         <div className="col-4" id="description">
-             <h1>Как это работает?</h1>
-             <p>Вам необходимо лишь указать примерное время на задачу. Приложение само разобъет ее на нужное количество "помидоров".
-             Запустите задачу, а приложение напонмит когда нужно будет сделать перерыв
-             </p>
-              <h1> <a id="signUp" href='/signup'> Попробовать </a>       </h1>
-             
-         </div>
-         <div className="col-8  img" id="imgsecond">
+
+        <div className="text-xs-center homeMainBlock block">
+            <h1> Как работать с этой техникой? </h1>
+            <p>Суть техники помидора — в таймере на определенное время. Пока таймер тикает, тебе нужно сконцентрироваться на задаче и не отвлекаться на другие дела. Классически, это 25 минут, после этого — перерыв в 5 минут</p>
+            <p>Создайте задачу, указав количество минут которые можно на нее потратить, а затем запустите таймер</p>
+            <img src={Woman} className="img-rounded homeMainImg" alt="..." />
+
+            <h4>Приложение само разобьет задачу на промежутки, напомнит о перерыве или старте нового периода</h4>
+            <a href='/tasks'> Перейти к задачам ! </a>
+        </div>
+
+        <div className="text-xs-center homeMainBlock block">
+            <h1> Советы при работе! </h1>
+            <li>Конкретизируйте задачи, которые хотите решить. Лучше, если они записаны и видны перед глазами </li>
+            <li> Задачи можно хранить прямо здесь </li>
+            <li>Подключите уведомления в телеграмм, это очень удобно </li>
+            <img src={WorkPanel} className="img-rounded homeMainImg right" alt="..." />
+           
+            <li> Не забывайте отдыхать - это главная ошибка при работе с техникой помидора </li>
+            <li> Если что-то пошло не по плану, помидор можно поставить на паузу </li>
+            <li> Создав задачу, не забудьте ее запустить </li>
+              <h4> Приложение можно использовать  и как простой ToDo лист</h4>
+            <a href='/tasks'> Создать свою первую задачу ! </a>
+        </div>
+
+        <div className="text-xs-center homeMainBlock block">
+            <h1>Это правда эффективно! </h1>
+            <h4><i className="fas fa-lightbulb"/> абсолютно бесплатно </h4>
+            <p>Попробуйте использовать технику в течение дня. Результат будет впечатляющий!</p>
+            <img src={LikeMan} className="img-rounded homeMainImg right" alt="..." />
+            <h4> Главное  — это четкое соблюдение таймера, приложение отлично поможет справиться с этим.</h4>
+
+           
+            <a href='/tasks'>Попробовать технику помидора</a>
+        </div>
+
+        <div className="footer">
+            <p> © Denis Cherniy 2020  </p>
+             <p>  mosavia.dc@gmail.com       </p>
+        </div>
         
-         </div>
-     </div>
-     <div className="row no-gutters">
-         <div className="col-8 img" id="imgthird">
-    
-
-         </div>
-                <div className="col-4" id="description">
-                    <h1> Краткая инструкция </h1>
-                    <i className="fas fa-hourglass-start">Время промежутка</i>
-                    <img id="tomatoImg"  src={Tomato} /> Промежутков осталось
-        
 
 
-
-             <i className="far fa-play-circle" > Запускает задачу </i>
-             <i className="far fa-pause-circle">Приостановить задачу</i>
-             <i className="fas fa-circle-notch ">Завершает задачу</i>
-             <i className="far fa-minus-circle" > Удаляет задачу</i>
-      
-         </div>
-     </div>
-     <div className="row no-gutters">
-     
-         <div className="col-12" id="description">
-             <h1> Просто попробуйте! </h1>
-                <h2>Ваша продуктивность заметно вырастет</h2>
-                    <h1> <a id="signUp" href='/signup'> Попробовать </a>       </h1>
-         </div>                    
-
-             </div>
     </div>
-      <div className="footer">
-            © 2020 Denis Cherniy, mosavia.dc@gmail.com
-       </div>
-    </div>
-
-
 
 }
 

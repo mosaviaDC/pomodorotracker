@@ -8,12 +8,12 @@ import Home from '../Home/Home';
 import AppFallBack from '../AppFallBack/AppFallBack'
  const App = () => {
      return <div>
-         <NavBar/>
+         <NavBar />
          <Switch>
              <Route exact path="/" component={Home} />
-             <Route exact path="/tasks" component={TasksPage} />
+             <Route exact path="/tasks" component={TasksPage}/>
              <Route exact path="/signup" component={Register} />
-             <Route exact path="/login" component={Login} />
+             <Route exact path="/signin" component={Login} />
              <Route path='*' exact component={AppFallBack} />
          </Switch>
        
