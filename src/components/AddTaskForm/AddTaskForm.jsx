@@ -93,7 +93,7 @@ const AddTaskForm = () => {
                     className="form-control"
                     name="taskName"
                     value={taskName}
-                    placeholder="Спасти этот мир"
+                    placeholder="Улучшить этот мир"
                     onChange={onChangeTaskName}
                     validations={[required]}
                 />
