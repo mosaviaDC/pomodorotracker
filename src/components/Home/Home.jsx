@@ -14,7 +14,7 @@ const Home = () => {
             <img src={Student} className="img-rounded homeMainImg" alt="..." />
 
             <h4>Это приложение поможет правильно использовать технику помидора, посдкажет время, когда лучше сделать перерыв, или сконцентрироваться над задачей  </h4>
-            <a href='/tasks'> Перейти к задачам ! </a>
+            <a href='/tasks'> Перейти к задачам! </a>
         </div>
 
         <div className="text-xs-center homeMainBlock block">
