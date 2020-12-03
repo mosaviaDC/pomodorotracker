@@ -94,7 +94,7 @@ return <div className="userTaskItem container-fluid">
     {task.task.inProgress && (
         <span>
             <img id="tomatoImg" src={Tomato} />
-            {task.task.taskPeriods}
+            {task.task.taskPeriods+1}
         </span>
         )}
 
