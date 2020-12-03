@@ -15,6 +15,12 @@
 .taskTime{
     font-size:18px;
 }
+.taskPeriods {
+    font-size: 18px;
+    margin: 0;
+    margin-right: 0.4em;
+    padding: 0;
+}
 
 
 
@@ -32,18 +38,19 @@ i:hover{
 #pauseBtn{
     display:inline-flex;
 }
-#tomatoImg{
-    width:16px;
-    height:16px;
-}
+
 #time { 
     margin:0;
     margin-right:0.4em;
     padding:0;
+    font-size:18px;
 }
 
 
 @media screen and (max-device-width:750px){
+    #time{
+        font-size:12px;
+    }
     .taskName{
         font-size:18px;
     }
@@ -53,6 +60,10 @@ i:hover{
         font-size: 14px;
     }
     span {
-              font-size:10px;
+         font-size:12px;
+    }
+    .taskPeriods{
+        font-size:12px;
+       
     }
 }

@@ -92,7 +92,7 @@ return <div className="userTaskItem container-fluid">
         <span className="taskName"> {task.task.taskName} </span>
 
     {task.task.inProgress && (
-        <span>
+        <span className="taskPeridos">
             <i className="fas fa-stopwatch"></i> 
             {task.task.taskPeriods+1}
         </span>
