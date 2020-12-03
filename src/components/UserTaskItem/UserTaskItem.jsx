@@ -78,15 +78,15 @@ const UserTaskItem = (task) => {
 
 return <div className="userTaskItem container-fluid">
          {task.task.inProgress && !task.task.isDone && (
-          <i className="fas fa-circle-notch fa-spin taskbtn doneBtn" onClick={onFinishButtonClick}></i>
+          <i className="fas fa-circle-notch fa-spin taskbtn doneBtn"  onClick={onFinishButtonClick}></i>
           )}
 
         {task.task.isDone && (
-        <i className="fas fa-check-circle  taskbtn doneBtn" ></i>
+        <i className="fas fa-check-circle  taskbtn doneBtn"> </i>
         )}
 
          {!task.task.inProgress && !task.task.isDone && (
-        <i className="fas fa-circle-notch taskbtn doneBtn" onClick={onFinishButtonClick}></i>
+        <i className="fas fa-circle-notch taskbtn doneBtn"  onClick={onFinishButtonClick}></i>
          )}
 
         <span className="taskName"> {task.task.taskName} </span>
