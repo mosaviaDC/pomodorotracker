@@ -40,10 +40,7 @@ const login = (email, password) => {
 
 
         return respone.data;
-    }).catch((err) => {
-        return err;
     });
-
   
 };
 
