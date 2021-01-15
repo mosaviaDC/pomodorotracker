@@ -112,7 +112,7 @@ const Login = (props) => {
                                     <div className="violet"></div>
                                 </div>   
                             )}
-                            <span>Войти</span>
+                            <span>Полетели</span>
                         </button>
                     </div>
 
