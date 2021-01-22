@@ -34,6 +34,7 @@
   },
   "proxy":"https://pomodorotodotracker.herokuapp.com/",
   "secure": "true",
+  "homepage": "https://pomodorotracker.ru",
 
   "browserslist": {
     "production": [
