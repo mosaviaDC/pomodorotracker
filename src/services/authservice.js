@@ -28,20 +28,20 @@ const register = (email, firstName, password) => {
 const login = (email, password) => {
 
 
-        return axios.post(url + '/signin', {
-        email,
-        password
+    return axios.post(url + '/signin', {
+    email,
+    password
+}
+).then((respone) => {
+    console.log(respone);
+    if (respone.data.token) {
+        localStorage.setItem('user', JSON.stringify(respone.data));
     }
-    ).then((respone) => {
-        console.log(respone);
-        if (respone.data.token) {
-            localStorage.setItem('user', JSON.stringify(respone.data));
-        }
 
 
-        return respone.data;
-    });
-  
+    return respone.data;
+});
+
 };
 
 const logout = () => {
@@ -51,6 +51,21 @@ const logout = () => {
 const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem('user'));
 };
+
+const sendEmail = (Email) =>{
+return axios.post(url + '/forgot', {
+        Email,
+    }
+    ).then((respone) => {
+        console.log(respone);
+        return respone.data;
+    });
+
+
+
+}
+
+
 
 const getAuthToken = ()=>{
     const user = JSON.parse(localStorage.getItem('user'));
@@ -66,6 +81,7 @@ export default {
     register,
     logout,
     getCurrentUser,
-    getAuthToken
+    getAuthToken,
+    sendEmail
 }
 

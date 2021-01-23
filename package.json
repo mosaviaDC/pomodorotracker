@@ -32,7 +32,7 @@
       "react-app/jest"
     ]
   },
-  "proxy":"https://pomodorotodotracker.herokuapp.com/",
+  "proxy":"https://pomodorotracker.ru",
   "secure": "true",
   "homepage": "https://pomodorotracker.ru",
 

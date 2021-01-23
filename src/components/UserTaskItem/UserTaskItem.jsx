@@ -1,7 +1,6 @@
 ﻿import React, { useState } from 'react';
 import './UserTaskItem.scss';
 import TasksService from '../../services/tasksservice'
-import Tomato from '../../assets/tomato.png'
 //Непосредственно список задач пользователя или сообщение об его отсутсвии
 const UserTaskItem = (task) => {
     const [loading, setLoading] = useState(false);

@@ -6,6 +6,7 @@ import Register from '../Register/Register';
 import NavBar from '../NavBar/NavBar';
 import Home from '../Home/Home';
 import AppFallBack from '../AppFallBack/AppFallBack'
+import ForgotPassword from '../ForgotPassword/ForgotPassword';
  const App = () => {
      return <div>
          <NavBar />
@@ -14,6 +15,7 @@ import AppFallBack from '../AppFallBack/AppFallBack'
              <Route exact path="/tasks" component={TasksPage}/>
              <Route exact path="/signup" component={Register} />
              <Route exact path="/signin" component={Login} />
+             <Route exact path="/forgot" component ={ForgotPassword} />
              <Route path='*' exact component={AppFallBack} />
          </Switch>
        

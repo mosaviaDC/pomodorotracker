@@ -4,7 +4,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
 import AuthService from "../../services/authservice";
-import { Redirect } from 'react-router-dom';
 const required = (value) => {
     if (!value) {
         return (

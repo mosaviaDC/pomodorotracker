@@ -98,7 +98,7 @@ const TasksPage = (isLogin) => {
              <div>
             <div id="UserTasks" >
                 <h1>Еще нет задач</h1>
-                <img  className="noTasksImg" src={Image}/>
+                <img alt="noTasksImg" className="noTasksImg" src={Image}/>
                 <p>Сосредоточьтесь на своем дне</p>
                 <p>Коснитесь кнопки ниже, чтобы создать свою первую задачу!</p>
                
@@ -110,7 +110,7 @@ const TasksPage = (isLogin) => {
         {!isEntered && (
             <div id="UserTasks" >
                 <h1>Еще нет задач</h1>
-                <img className="noTasksImg" src={Image} />
+                <img alt='noTasksImg' className="noTasksImg" src={Image} />
                 <p>Сосредоточьтесь на своем дне</p>
                 <p>Зарегистрируйтесь и создайте свою первую задачу!</p>
                 <a href="/signup"> Регистрация </a>  или <a href="/signin"> Вход в аккаунт  </a>       
