@@ -44,8 +44,8 @@ const ForgotPassword =(props)=>{
             },
             (error)=>{
                 setLoading(false);
-                setMessage(error);
-               
+                setMessage(error + "Проверьте данные и попробуйте позже");
+
             }
             );
             
