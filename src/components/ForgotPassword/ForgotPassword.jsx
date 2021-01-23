@@ -3,6 +3,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../../services/authservice";
+import AppSendEmail from "../AppSendEmail/AppSendEmail"
 const required = (value) => {
     if (!value) {
         return (
@@ -39,7 +40,8 @@ const ForgotPassword =(props)=>{
         if (checkBtn.current.context._errors.length === 0) {
             AuthService.sendEmail(Email).then(
             (r)=> {
-                props.history.push("/");
+                props.history.push("/succesEmailSend");
+                <AppSendEmail email= {Email} />
                 window.location.reload();
             },
             (error)=>{
