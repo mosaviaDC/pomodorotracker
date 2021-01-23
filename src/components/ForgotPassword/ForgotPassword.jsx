@@ -41,6 +41,11 @@ const ForgotPassword =(props)=>{
             (r)=> {
                 props.history.push("/");
                 window.location.reload();
+            },
+            (error)=>{
+                setLoading(false);
+                setMessage(error);
+               
             }
             );
             
