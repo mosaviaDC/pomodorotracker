@@ -8,6 +8,7 @@ import Home from '../Home/Home';
 import AppFallBack from '../AppFallBack/AppFallBack'
 import ForgotPassword from '../ForgotPassword/ForgotPassword';
 import AppSendEmail from '../AppSendEmail/AppSendEmail';
+import ResetPassword from '../ResetPassword/ResetPassword';
  const App = () => {
      return <div>
          <NavBar />
@@ -18,7 +19,7 @@ import AppSendEmail from '../AppSendEmail/AppSendEmail';
              <Route exact path="/signin" component={Login} />
              <Route exact path="/forgot" component ={ForgotPassword} />
              <Route exact path ="/succesEmailSend" component ={AppSendEmail} />
-
+             <Route path="/reset:code" component ={ResetPassword} />
              <Route path='*' exact component={AppFallBack} />
          </Switch>
        
