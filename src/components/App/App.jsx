@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import TasksPage from '../TasksPage/TasksPage';
 import Login from '../Login/Login'
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Register from '../Register/Register';
 import NavBar from '../NavBar/NavBar';
 import Home from '../Home/Home';

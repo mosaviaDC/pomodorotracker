@@ -1,10 +1,13 @@
 import React from 'react';
 
 
-const AppSendEmail =(email) =>{
+const AppSendEmail =() =>{
 
     return <div className='emailSucces'>
-        <h1>Письмо с инструкцией отправлено на адрес {email}</h1>
+        <h1>Проверьте почтовый ящик
+        </h1>
+        <a href="/"> Вернуться на главную</a>
+        
     </div>
 }
 
