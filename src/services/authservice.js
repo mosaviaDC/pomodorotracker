@@ -27,6 +27,15 @@ const register = (email, firstName, password) => {
 
 const resetPassword = (Email,Password,ConfirmPassword,Code)=>{
 
+    console.log(axios.post(url+'/reset',{
+        Email,
+        Password,
+        ConfirmPassword,
+        Code
+    }));
+
+
+
     return axios.post(url+'/reset',{
         Email,
         Password,
