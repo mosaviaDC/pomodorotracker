@@ -22,7 +22,7 @@ import '../passwordSH.scss';
              <Route exact path="/forgot" component ={ForgotPassword} />
              <Route exact path ="/succesEmailSend:email" component ={AppSendEmail} />
              <Route path="/reset" component ={ResetPassword} />
-             <Route path=/succesPasswordReset:code component={SuccesPasswordReset}/>
+             <Route path="/succesPasswordReset:code" component={SuccesPasswordReset}/>
              <Route path='*' exact component={AppFallBack} />
 
          </Switch>
