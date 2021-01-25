@@ -25,6 +25,26 @@ const register = (email, firstName, password) => {
     
 };
 
+const resetPassword = (email,password,code)=>{
+
+    return axios.post(url+'/reset',{
+        email,
+        password,
+        code
+    }).then((respone) => {
+        return respone.data;
+    });
+
+    
+
+
+}
+
+
+
+
+
+
 const login = (email, password) => {
 
 
@@ -82,6 +102,7 @@ export default {
     logout,
     getCurrentUser,
     getAuthToken,
-    sendEmail
+    sendEmail,
+    resetPassword
 }
 

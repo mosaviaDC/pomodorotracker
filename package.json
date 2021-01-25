@@ -10,6 +10,7 @@
     "express-favicon": "^2.0.1",
     "exrpess": "^0.0.1-security",
     "node-sass": "^4.0.0",
+    "query-string": "^6.13.8",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
@@ -32,10 +33,9 @@
       "react-app/jest"
     ]
   },
-  "proxy":"https://pomodorotracker.ru",
+  "proxy": "https://pomodorotracker.ru",
   "secure": "true",
   "homepage": "https://pomodorotracker.ru",
-
   "browserslist": {
     "production": [
       ">0.2%",

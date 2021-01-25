@@ -70,7 +70,33 @@ const Login = (props) => {
         } else {
             setLoading(false);
         }
+
+
+
+
+
+
     };
+
+    const showPass = (e)=>{
+        let show = e.target;
+        show.style.cssText="display:none";
+        let hide = document.getElementById('hidePass');
+        hide.style.cssText="display:inline";
+        let t = document.getElementById("password");
+        t.classList.add("view");
+        t.setAttribute('type','text');
+    }
+    const hidePass =(e)=>{
+        let hide = e.target;
+        hide.style.cssText="display:none";
+        let show = document.getElementById('showPass');
+        show.style.cssText="display:inline";
+        let t = document.getElementById("password");
+        t.classList.add("view");
+        t.setAttribute('type','password');
+
+    }
 
     return (
         <div className="col-md-12">
@@ -95,11 +121,14 @@ const Login = (props) => {
                         <Input
                             type="password"
                             className="form-control"
+                            id="password"
                             name="password"
                             value={password}
                             onChange={onChangePassword}
                             validations={[required]}
                         />
+                         <label id ="showPass" onClick={showPass}>Показать пароль</label>
+                        <label id="hidePass" onClick={hidePass}>Скрыть пароль</label>
                     </div>
 
                     <div className="form-group">
