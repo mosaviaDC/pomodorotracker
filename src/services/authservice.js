@@ -38,7 +38,6 @@ const resetPassword = (Email,Password,Code)=>{
     return axios.post(url+'/reset',{
         Email,
         Password,
-        ConfirmPassword,
         Code
     }).then((respone) => {
         console.log(respone.data);
