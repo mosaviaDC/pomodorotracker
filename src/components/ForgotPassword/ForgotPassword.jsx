@@ -40,7 +40,7 @@ const ForgotPassword =(props)=>{
         if (checkBtn.current.context._errors.length === 0) {
             AuthService.sendEmail(Email).then(
             (r)=> {
-                props.history.push('/succesEmailSend'+{Email});
+                props.history.push('/succesEmailSend'+ Email);
                 window.location.reload();
             },
             (error)=>{

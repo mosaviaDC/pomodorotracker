@@ -4,7 +4,6 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../../services/authservice";
 import queryString from 'query-string';
-import qs from 'qs';
 
 const required = (value) => {
     if (!value) {
@@ -162,7 +161,6 @@ const ResetPassword = (props)=>{
 
             <div className="card card-container">
                 <h4>{queryString.parse(props.location.search).email}</h4>
-                <h4>{queryString.parse(props.location.search).code}</h4>
                 <Form onSubmit={handleLogin} ref={form}>
                 
                 <div className="form-group">
