@@ -103,6 +103,12 @@ const ResetPassword = (props)=>{
         setMessage("");
         setLoading(true);
 
+
+         if (queryString.parse(props.location.search).code !== code) {
+            setMessage("Коды не совпадают");
+            setLoading(false);
+        }
+
         if (password !== confirmPassword){
         setMessage("Пароли должны совпадать");
         setLoading(false);
@@ -117,11 +123,14 @@ const ResetPassword = (props)=>{
         if (checkBtn.current.context._errors.length === 0) {
             let params = queryString.parse(props.location.search);
 
+            
+
+            
 
           
             AuthService.resetPassword(params.email,password,code).then(()=>{
-
-                window.location.push('/login');
+                props.history.push("/login");
+                window.location.reload();
             },
             (error)=>{
                     setLoading(false);
