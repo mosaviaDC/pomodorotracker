@@ -54,8 +54,9 @@ const ResetPassword = (props)=>{
             let params = queryString.parse(props.location.search);
 
 
-
-            AuthService.resetPassword(params.email,password,confirmPassword,params.code,params.id).then(()=>{
+            let code = params.code;
+            code = code.replace(/\s+/g, '');
+            AuthService.resetPassword(params.email,password,code).then(()=>{
 
                 window.location.push('/login');
             },
