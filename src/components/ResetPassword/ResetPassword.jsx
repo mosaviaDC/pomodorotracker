@@ -23,6 +23,7 @@ const ResetPassword = (props)=>{
     const form = useRef();
     const checkBtn = useRef();
     const [password, setPassword] = useState("");
+    const [code, setCode] = useState("");
     const [confirmPassword,setConfirmPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
@@ -32,46 +33,6 @@ const ResetPassword = (props)=>{
 
 
 
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-
-        setMessage("");
-        setLoading(true);
-
-        if (password !== confirmPassword){
-        setMessage("Пароли должны совпадать");
-        setLoading(false);
-        }
-        else {
-
-
-
-
-        form.current.validateAll();
-
-        if (checkBtn.current.context._errors.length === 0) {
-            let params = queryString.parse(props.location.search);
-
-
-            let code = params.code;
-            code = code.replace(/\s+/g, '');
-            AuthService.resetPassword(params.email,password,code).then(()=>{
-
-                window.location.push('/login');
-            },
-            (error)=>{
-                    setLoading(false);
-                    console.log(error);
-                    setMessage(error + "\nПроверьте данные и попробуйте позже");
-            });
-        }
-        else {
-            setLoading(false);
-        }
-    }
-
-    }
 
     const onPasswordChange=(e)=>{
    
@@ -114,6 +75,9 @@ const ResetPassword = (props)=>{
 
     }
 
+    const onCode =(e)=>{
+        setCode(e.target.value);
+    }
 
 
     const hidePassCon =(e)=>{
@@ -126,6 +90,64 @@ const ResetPassword = (props)=>{
         t.setAttribute('type','password');
 
     }
+
+
+
+
+
+
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        setMessage("");
+        setLoading(true);
+
+        if (password !== confirmPassword){
+        setMessage("Пароли должны совпадать");
+        setLoading(false);
+        }
+        else {
+
+
+
+
+        form.current.validateAll();
+
+        if (checkBtn.current.context._errors.length === 0) {
+            let params = queryString.parse(props.location.search);
+
+
+          
+            AuthService.resetPassword(params.email,password,code).then(()=>{
+
+                window.location.push('/login');
+            },
+            (error)=>{
+                    setLoading(false);
+                    console.log(error);
+                    setMessage(error + "\nПроверьте данные и попробуйте позже");
+            });
+        }
+        else {
+            setLoading(false);
+        }
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="col-md-12">
 
@@ -153,6 +175,31 @@ const ResetPassword = (props)=>{
                         
             
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="code">code</label>
+                        
+                        <Input
+                            type="text"
+                            className="form-control"
+                            
+                            name="code"
+                            value={code}
+                            onChange={onCode}
+                            validations={[required]}
+                          
+                        /> 
+                        
+                        <label id ="showPass" onClick={showPass}>Показать пароль</label>
+                        <label id="hidePass" onClick={hidePass}>Скрыть пароль</label>
+                        
+            
+                    </div>
+
+
+
+
+
+
                     <div className="form-group">
                         <label htmlFor="passwordConfirm">Пароль еще раз</label>
                         <Input
