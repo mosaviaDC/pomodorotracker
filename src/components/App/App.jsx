@@ -18,8 +18,8 @@ import ResetPassword from '../ResetPassword/ResetPassword';
              <Route exact path="/signup" component={Register} />
              <Route exact path="/signin" component={Login} />
              <Route exact path="/forgot" component ={ForgotPassword} />
-             <Route exact path ="/succesEmailSend" component ={AppSendEmail} />
-             <Route path="/reset:code" component ={ResetPassword} />
+             <Route exact path ="/succesEmailSend:email" component ={AppSendEmail} />
+             <Route path="/reset:code/:email" component ={ResetPassword} />
              <Route path='*' exact component={AppFallBack} />
          </Switch>
        
