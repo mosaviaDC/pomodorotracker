@@ -128,7 +128,7 @@ const ResetPassword = (props)=>{
 
           
             AuthService.resetPassword(params.email,password,urlCode).then(()=>{
-                props.history.push("/signin");
+                props.history.push("/succesPasswordReset" + urlCode);
                 window.location.reload();
             },
             (error)=>{

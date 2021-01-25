@@ -9,6 +9,7 @@ import AppFallBack from '../AppFallBack/AppFallBack'
 import ForgotPassword from '../ForgotPassword/ForgotPassword';
 import AppSendEmail from '../AppSendEmail/AppSendEmail';
 import ResetPassword from '../ResetPassword/ResetPassword';
+import SuccesPasswordReset from '../SuccesPasswordReset/SuccesPasswordReset'
 import '../passwordSH.scss';
  const App = () => {
      return <div>
@@ -21,7 +22,9 @@ import '../passwordSH.scss';
              <Route exact path="/forgot" component ={ForgotPassword} />
              <Route exact path ="/succesEmailSend:email" component ={AppSendEmail} />
              <Route path="/reset" component ={ResetPassword} />
+             <Route path=/succesPasswordReset:code component={SuccesPasswordReset}/>
              <Route path='*' exact component={AppFallBack} />
+
          </Switch>
        
          </div>
