@@ -61,6 +61,7 @@ const ResetPassword = (props)=>{
             },
             (error)=>{
                     setLoading(false);
+                    console.log(error);
                     setMessage(error + "\nПроверьте данные и попробуйте позже");
             });
         }
@@ -126,9 +127,10 @@ const ResetPassword = (props)=>{
     }
     return (
         <div className="col-md-12">
+
             <div className="card card-container">
                 <h4>{queryString.parse(props.location.search).email}</h4>
-
+                <h4>{queryString.parse(props.location.search).code}</h4>
                 <Form onSubmit={handleLogin} ref={form}>
                 
                 <div className="form-group">

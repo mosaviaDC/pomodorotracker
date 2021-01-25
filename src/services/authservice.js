@@ -33,6 +33,7 @@ const resetPassword = (Email,Password,ConfirmPassword,Code)=>{
         ConfirmPassword,
         Code
     }).then((respone) => {
+        console.log(respone.data);
         return respone.data;
     });
 
