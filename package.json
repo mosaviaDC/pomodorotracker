@@ -10,6 +10,7 @@
     "express-favicon": "^2.0.1",
     "exrpess": "^0.0.1-security",
     "node-sass": "^4.0.0",
+    "qs": "^6.9.6",
     "query-string": "^6.13.8",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",

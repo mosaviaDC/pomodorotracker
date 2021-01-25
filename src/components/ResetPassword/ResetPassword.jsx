@@ -4,6 +4,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import AuthService from "../../services/authservice";
 import queryString from 'query-string';
+import qs from 'qs';
 
 const required = (value) => {
     if (!value) {
@@ -23,7 +24,6 @@ const ResetPassword = (props)=>{
     const form = useRef();
     const checkBtn = useRef();
     const [password, setPassword] = useState("");
-    const [code, setCode] = useState("");
     const [confirmPassword,setConfirmPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
@@ -75,9 +75,7 @@ const ResetPassword = (props)=>{
 
     }
 
-    const onCode =(e)=>{
-        setCode(e.target.value);
-    }
+
 
 
     const hidePassCon =(e)=>{
@@ -104,19 +102,20 @@ const ResetPassword = (props)=>{
         setLoading(true);
 
 
-         if (queryString.parse(props.location.search).code !== code) {
-            setMessage("Коды не совпадают");
-            setLoading(false);
-        }
+         
 
         if (password !== confirmPassword){
         setMessage("Пароли должны совпадать");
         setLoading(false);
         }
+    
         else {
+         
 
-
-
+   
+            
+            
+            
 
         form.current.validateAll();
 
@@ -125,11 +124,12 @@ const ResetPassword = (props)=>{
 
             
 
-            
+            let url = encodeURI(window.location.search);
+            let urlCode = queryString.parse(url).code;
 
           
-            AuthService.resetPassword(params.email,password,code).then(()=>{
-                props.history.push("/login");
+            AuthService.resetPassword(params.email,password,urlCode).then(()=>{
+                props.history.push("/signin");
                 window.location.reload();
             },
             (error)=>{
@@ -184,25 +184,7 @@ const ResetPassword = (props)=>{
                         
             
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="code">code</label>
-                        
-                        <Input
-                            type="text"
-                            className="form-control"
-                            
-                            name="code"
-                            value={code}
-                            onChange={onCode}
-                            validations={[required]}
-                          
-                        /> 
-                        
-                        <label id ="showPass" onClick={showPass}>Показать пароль</label>
-                        <label id="hidePass" onClick={hidePass}>Скрыть пароль</label>
-                        
-            
-                    </div>
+                   
 
 
 
