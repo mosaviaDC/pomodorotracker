@@ -25,11 +25,12 @@ const register = (email, firstName, password) => {
     
 };
 
-const resetPassword = (email,password,code)=>{
+const resetPassword = (email,password,confirmPassword,code)=>{
 
     return axios.post(url+'/reset',{
         email,
         password,
+        confirmPassword,
         code
     }).then((respone) => {
         return respone.data;

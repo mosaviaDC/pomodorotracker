@@ -55,7 +55,7 @@ const ResetPassword = (props)=>{
 
 
 
-            AuthService.resetPassword(params.email,password,params.code).then(()=>{
+            AuthService.resetPassword(params.email,password,confirmPassword,params.code).then(()=>{
 
                 window.location.push('/login');
             },
