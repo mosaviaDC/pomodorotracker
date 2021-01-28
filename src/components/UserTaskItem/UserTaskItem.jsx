@@ -36,7 +36,12 @@ const UserTaskItem = (task) => {
 
    
 
-
+    const onInfoButtonClick = (e)=>{
+        let userTaskItems = document.getElementsByClassName('userTaskItem container-fluid');
+        userTaskItems.forEach(element => {
+            element.style.cssText = 'display:none';
+        });
+    }
 
 
 
@@ -87,7 +92,7 @@ return <div className="userTaskItem container-fluid">
          {!task.task.inProgress && !task.task.isDone && (
         <i className="fas fa-circle-notch taskbtn doneBtn"  onClick={onFinishButtonClick}></i>
          )}
-          <i className="fas fa-info-circle"></i>
+          <i className="fas fa-info-circle" onClick={onInfoButtonClick} ></i>
         <span className="taskName"> {task.task.taskName} </span>
 
     {task.task.inProgress && (
