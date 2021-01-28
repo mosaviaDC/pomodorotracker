@@ -1,6 +1,5 @@
 ﻿import React, { useState, useEffect } from "react";
 import AuthService from '../../services/authservice'
-import TaskPage from '../TasksPage/TasksPage'
 import { Link } from 'react-router-dom';
 import './NavBar.scss';
 const NavBar = () => {

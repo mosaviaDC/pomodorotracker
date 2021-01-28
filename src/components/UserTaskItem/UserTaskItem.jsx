@@ -87,7 +87,7 @@ return <div className="userTaskItem container-fluid">
          {!task.task.inProgress && !task.task.isDone && (
         <i className="fas fa-circle-notch taskbtn doneBtn"  onClick={onFinishButtonClick}></i>
          )}
-
+          <i className="fas fa-info-circle"></i>
         <span className="taskName"> {task.task.taskName} </span>
 
     {task.task.inProgress && (
