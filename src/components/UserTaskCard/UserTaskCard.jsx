@@ -218,7 +218,7 @@ const UserTaskCard = (task)=>{
     <DatePicker selected={dataTime} showTimeSelect onChange={data=>onTimeChange(data)}
         timeFormat="p"
         locale="ru"
-        timeIntervals={2}
+        timeIntervals={15}
         dateFormat="Pp"
         filterTime={filterPassedTime}
         minDate={new Date()}
