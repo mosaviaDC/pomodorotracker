@@ -1,0 +1,39 @@
+.fa-bell{
+    color:#ff922b;
+}
+.userTaskCard{
+    margin-top: 5%;
+    border: 1px solid black;
+}
+.closeButton{
+    color:red;
+    
+}
+.closeButton:hover{
+    border: 1px solid red;
+    border-radius: 50%;
+}
+.description {
+    border: 0.5px solid gray;
+}
+.importantStar {
+    color:#ff922b;
+}
+
+.react-datepicker-popper{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(0%,0%) !important;
+    width:auto!important;
+}
+
+
+@media screen and (min-device-width:750px){
+    .react-datepicker-popper{
+     
+        transform: translate(50%,0%) !important;
+
+    }
+
+}

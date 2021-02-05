@@ -1,7 +1,7 @@
 import axios from 'axios';
 import AuthService from './authservice'
 
-const backurl = "https://pomodorotodotracker.herokuapp.com/tasks";
+const backurl = "http://localhost:3001/tasks";
 const headers = {
     "Authorization": "Bearer " + AuthService.getAuthToken(),
     'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const DeleteTask = (id) => {
 
 
 
-const AddTask = (taskName, taskTime, taskDescription = 'áåç îïèñàíèÿ') => {
+const AddTask = (taskName, taskTime, taskDescription = 'ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð·Ð°Ð´Ð°Ñ‡Ð¸') => {
 
     const task = {
         taskName: taskName,

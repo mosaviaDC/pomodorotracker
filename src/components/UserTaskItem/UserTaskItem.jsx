@@ -1,11 +1,12 @@
 ﻿import React, { useState } from 'react';
 import './UserTaskItem.scss';
 import TasksService from '../../services/tasksservice'
+import UserTaskCard from '../UserTaskCard/UserTaskCard';
 //Непосредственно список задач пользователя или сообщение об его отсутсвии
 const UserTaskItem = (task) => {
     const [loading, setLoading] = useState(false);
-
-
+    const [cardOpen,setCardOpen] = useState(false);
+ 
 
     const onDeleteButtonClick = () => {
         setLoading(true);
@@ -17,6 +18,7 @@ const UserTaskItem = (task) => {
                 console.log(error.response);
             });
     };
+    
 
     const onFinishButtonClick = () => {
         setLoading(true);
@@ -38,11 +40,21 @@ const UserTaskItem = (task) => {
 
     const onInfoButtonClick = (e)=>{
         let userTaskItems = document.getElementsByClassName('userTaskItem container-fluid');
-        userTaskItems.forEach(element => {
-            element.style.cssText = 'display:none';
-        });
+        for (let i=0;i<userTaskItems.length;i++){
+            userTaskItems[i].style.cssText='display:none'; //скрываем все задачи пользователя
+        }
+        setCardOpen(true);
+
     }
 
+    const onCloseButtonClick = (e)=>{
+        let userTaskItems = document.getElementsByClassName('userTaskItem container-fluid');
+        for (let i=0;i<userTaskItems.length;i++){
+            userTaskItems[i].style.cssText='display:inline-flex'; //скрываем все задачи пользователя
+        }
+        setCardOpen(false);
+       
+    }
 
 
     const onStartButtonClick = (e) => {
@@ -77,10 +89,14 @@ const UserTaskItem = (task) => {
         });
     }
 
+   
 
 
-
-return <div className="userTaskItem container-fluid">
+if (cardOpen){
+    return     <UserTaskCard task={task.task}  onCloseButton={onCloseButtonClick}/>
+}
+else 
+return  <div className="userTaskItem container-fluid">
          {task.task.inProgress && !task.task.isDone && (
           <i className="fas fa-circle-notch fa-spin taskbtn doneBtn"  onClick={onFinishButtonClick}></i>
           )}
@@ -147,6 +163,8 @@ return <div className="userTaskItem container-fluid">
                 <div className="violet"></div>
             </div>   
         )}
+
+      
 
     </div>
 }
