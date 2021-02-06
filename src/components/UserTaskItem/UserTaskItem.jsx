@@ -49,11 +49,8 @@ const UserTaskItem = (task) => {
                 onCloseButtonClick();
             }
       } 
-      window.onbeforeunload = function(e) {
-          alert('32322');
-          e.preventDefault();
-          onCloseButtonClick();
-       }
+
+       
 
    
     
@@ -70,7 +67,7 @@ const UserTaskItem = (task) => {
         }
         setCardOpen(false);
         document.onkeyup = null;
-        window.onbeforeunload = null;
+
        
     }
 
