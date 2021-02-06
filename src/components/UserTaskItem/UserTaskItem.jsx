@@ -45,7 +45,7 @@ const UserTaskItem = (task) => {
         }
         setCardOpen(true);
         document.onkeyup = function event (e){
-            if (e.keyCode==27){
+            if (e.keyCode===27){
                 onCloseButtonClick();
             }
       } 
