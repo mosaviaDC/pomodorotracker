@@ -50,6 +50,7 @@ const UserTaskItem = (task) => {
             }
       } 
       window.onbeforeunload = function(e) {
+          alert('32322');
           e.preventDefault();
           onCloseButtonClick();
        }
