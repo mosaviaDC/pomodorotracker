@@ -48,14 +48,13 @@ const UserTaskItem = (task) => {
             if (e.keyCode==27){
                 onCloseButtonClick();
             }
-      }
+      } 
+      window.onbeforeunload = function(e) {
+          onCloseButtonClick();
+       }
 
-      document.onpopstate = function(e,data){
-        let dir = data.state.direction;
-        if (dir=='back'){
-            alert('232');
-        }
-    }
+   
+    
 
   
 
@@ -69,7 +68,7 @@ const UserTaskItem = (task) => {
         }
         setCardOpen(false);
         document.onkeyup = null;
-        document.onpopstate = null;
+        window.onbeforeunload = null;
        
     }
 
