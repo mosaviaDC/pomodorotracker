@@ -24,15 +24,21 @@
     position: absolute;
     top: 0px;
     left: 0px;
+  
     transform: translate(0%,0%) !important;
     width:auto!important;
 }
 
 
+.react-datepicker__time-list{
+    max-height: 15vh !important;
+}
+// Большие экраны
 @media screen and (min-device-width:750px){
     .react-datepicker-popper{
      
         transform: translate(50%,0%) !important;
+     
 
     }
 

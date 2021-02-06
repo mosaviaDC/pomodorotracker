@@ -37,8 +37,9 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://pomodorotracker.ru",
-  "homepage": "https://pomodorotracker.ru",
+  "proxy": "https://pomodorotodotracker.herokuapp.com/",
+  "homepage": "https://pomodorotodotracker.herokuapp.com/",
+  
   "browserslist": {
     "production": [
       ">0.2%",

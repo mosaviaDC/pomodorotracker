@@ -44,6 +44,21 @@ const UserTaskItem = (task) => {
             userTaskItems[i].style.cssText='display:none'; //скрываем все задачи пользователя
         }
         setCardOpen(true);
+        document.onkeyup = function event (e){
+            if (e.keyCode==27){
+                onCloseButtonClick();
+            }
+      }
+
+      document.onpopstate = function(e,data){
+        let dir = data.state.direction;
+        if (dir=='back'){
+            alert('232');
+        }
+    }
+
+  
+
 
     }
 
@@ -53,6 +68,8 @@ const UserTaskItem = (task) => {
             userTaskItems[i].style.cssText='display:inline-flex'; //скрываем все задачи пользователя
         }
         setCardOpen(false);
+        document.onkeyup = null;
+        document.onpopstate = null;
        
     }
 

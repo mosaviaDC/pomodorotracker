@@ -49,6 +49,7 @@ const UserTaskCard = (task)=>{
         setLoading(true);
         TasksService.DeleteTask(task.task.id).then(() => {
             setLoading(false);
+            task.onCloseButton();
         },
             (error) => {
                 setLoading(false);
@@ -158,13 +159,7 @@ const UserTaskCard = (task)=>{
 
    
 
-
-
-
-
-
-
- 
+    
 
 
  
@@ -213,7 +208,7 @@ const UserTaskCard = (task)=>{
     <div>
     
     
-         <i className="far fa-calendar-alt" >Изменить дату выполнения
+         <i className="far fa-calendar-alt" id="datepicker" >Изменить дату выполнения
          
     <DatePicker selected={dataTime} showTimeSelect onChange={data=>onTimeChange(data)}
         timeFormat="p"
